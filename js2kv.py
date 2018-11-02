@@ -46,50 +46,12 @@ body25_colors_mpl = [(1.,0.,0.33),(1.,0.,0.),(1.,0.33,0.),(1.,0.67,0.),(1.,1.,0.
 
 # -----------------------------------------------------------------------------
 
-
-
-'''
-Using OpenPose
-
-Background information: 
- "OpenPose" is Real-time multi-person keypoint detection library for body, face, hands, and foot estimation
- OpenPose is open source for research purposes.
- https://github.com/CMU-Perceptual-Computing-Lab/openpose
- Keypoint JSON file, pose model with 25 joints, can be output in frame-by-frame. 
-
-Although there is a problem of accuracy, it is still useful if you can read the OpenPose output files with Kinovea.
-I made a prototype script to convert from OpenPose JSON files to Kinovea XML file, so I will share it.
-
-Usage:
-
-1. Making OpenPose Keypoint JSON files
-Download OpenPose from https://github.com/CMU-Perceptual-Computing-Lab/openpose/releases. I used Windows CPU version binary.
-Run an example command with "-write_json [Output directory]".
-> bin\OpenPoseDemo.exe --video examples\media\video.avi -write_json .\output
-CPU version is very slow. "GPU" version is faster ten or hundred times.
-"examples\media\video.avi" has 205 frames. 205 JSON files will be there.
-
-2. Converst from OpenPose JSON to Kinovea XML
-Download conversion program "js2kv.py" from https://github.com/sitony/kinovea.
-
-Run js2kv.py convert program.
-> python js2kv.py --json media\output\*.json --video media\video.avi --target 640 360 --output output.kva
-
-
-'''
-
-
-
-
-
-
-# js2kv.py
-# python jk5.py --json media\output\*.json --video media\video.avi --target 640 360 --output output.kva
-
+# example
+# > python js2kv.py --json media\output\*.json --video media\video.avi --target 640 360 --output video.kva
 
 parser = argparse.ArgumentParser(description='Convert from OpenPose JSON to Kinovea KVA   (v20181103)')
 parser.add_argument('--json', type=str, required=True, metavar='files', help='JSON files (e.g. ./output/*.json)')
-parser.add_argument('--video', type=str, required=True, metavar='file', help='Video file (e.g. ./running.mp4')
+parser.add_argument('--video', type=str, required=True, metavar='file', help='Video file (e.g. ./running.avi')
 parser.add_argument('--target', type=int, required=True, nargs=2, metavar='axis', help='X Y coordinate of target head position (e.g. 320 160)')
 parser.add_argument('--output', type=str, metavar='file', help='output KVA file (e.g. output.kva)')
 args = parser.parse_args()
