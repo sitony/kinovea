@@ -19,7 +19,7 @@ Download OpenPose from https://github.com/CMU-Perceptual-Computing-Lab/openpose/
 
 Run an example command with "-write_json [Output directory]".
 
-> bin\OpenPoseDemo.exe --video examples\media\video.avi -write_json .\output
+``` bin\OpenPoseDemo.exe --video examples\media\video.avi -write_json .\output ```
 
 CPU version is very slow. "GPU" version is faster ten or hundred times.
 
@@ -32,7 +32,7 @@ Download conversion program "js2kv.py" from https://github.com/sitony/kinovea.
 This program needs "python 3" environment.
 
 Run js2kv.py convert program as follows.
-> python js2kv.py --json media\output\*.json --video media\video.avi --target 640 360 --output video.kva
+``` python js2kv.py --json media\output\*.json --video media\video.avi --target 640 360 --output video.kva ```
 
     : js2kv.py [-h] --json files --video file --target axis axis --output file
     Convert from OpenPose JSON to Kinovea KVA (v20181103)
