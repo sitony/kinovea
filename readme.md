@@ -48,5 +48,10 @@ Run js2kv.py convert program as follows.
 
 Video file and Output.KVA files must have the same name, and be in the same folder.
  
-<img src="./sample/kinovea-image.png">
+<img src="./sample/kinovea-image.png" width="400">
+<img src="./sample/kinovea-taiso.png" width="400">
  
+4. Known bug
+
+When opened KVA file from Kinovea together with the MP4 or MKV file, it could not be displayed properly.
+AVI file is good.
