@@ -47,3 +47,5 @@ Run js2kv.py convert program as follows.
 
 Video file and Output.KVA files must have the same name, and be in the same folder.
  
+<img src="./sample/kinovea-image.png">
+ 
