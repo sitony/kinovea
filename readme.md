@@ -54,4 +54,4 @@ Video file and Output.KVA files must have the same name, and be in the same fold
 4. Known bug
 
 When opened KVA file from Kinovea together with the MP4 or MKV file, it could not be displayed properly.
-AVI file is good.
+AVI file is good. (Kinovea 0.8.27)
